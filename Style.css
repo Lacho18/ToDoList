@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.CompleteTaskButton {
+    background-color: #66ff33;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    margin-left: 10%;
+}
