@@ -3,11 +3,18 @@
     padding: 0;
 }
 
+body {
+    background-color: #d9b3ff;
+}
+
 #root {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 7px solid black;
+    border-radius: 10px;
+    width: 35%;
 }
 
 .CompleteTaskButton {
@@ -19,3 +26,76 @@
     margin: 15px;
     margin-left: 10%;
 }
+
+img {
+    width: 15%;
+    height: 100%;
+    margin-right: 18px;
+}
+
+#title > p {
+    text-transform: uppercase;
+    word-spacing: 5px;
+    font-size: 2.3vmax;
+    font-weight: bold;
+}
+
+#title {
+    border-bottom: 4px solid black;
+    width: 60%;
+}
+
+#Tasks {
+    width: 60%;
+}
+
+#Tasks > ul {
+    margin-left: 10%;
+    font-size: 1.4vmax;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#TextField {
+    position: relative;
+    border-top: 7px solid black;
+}
+
+#TextField > * {
+    margin: 2%;
+    padding: 3px;
+    font-size: 2vmax;
+}
+
+.addButton{
+    position: absolute;
+    width: 15%;
+    height: 10vh;
+    overflow: hidden;
+    border-top:7px solid #00cc00;
+    left: 85%;
+    top: 102%;
+    font-size: 2vmax;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  .addButton:before, .addButton:after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    height: 100%; width: 50%;
+    z-index: -1;
+    border:5px solid #00cc00;
+    box-sizing:border-box;
+  }
+  .addButton:before{
+    left: 0;  
+    transform-origin: 0 0;
+    transform: skewY(-20deg);
+    border-width:0 0 7px 6px;
+  }
+  .addButton:after{
+    right: 0;
+    transform-origin: 100% 0;
+    transform: skewY(20deg);
+    border-width:0 6px 7px 0;
+  }
