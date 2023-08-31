@@ -64,14 +64,4 @@ function checkForRepeat(ulElement, value) {
     return true;
 }
 
-addButton.addEventListener("click", () => {
-    if(textField.value !== "") {
-        if(checkForRepeat(list, textField.value)) {
-            tasksContext.push(textField.value);
-            clearList();
-            updateList(tasksContext);
-        }
-    }
-});
-
 updateList(tasksContext);
