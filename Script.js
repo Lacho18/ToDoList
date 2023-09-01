@@ -106,16 +106,6 @@ function checkForRepeat(ulElement, value) {
     return true;
 }
 
-function checkForExistance(array, value) {
-    for(let i = 0; i < array.length; i++) {
-        if(array[i] === value) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
 function Arrangement(array, markedIndex) {
     let j = array[markedIndex];
     if(j != array.length - 1) {
