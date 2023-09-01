@@ -18,16 +18,21 @@ body {
 }
 
 .CompleteTaskButton {
-    background-color: #66ff33;
-    width: 25px;
-    height: 25px;
+    /**background-color: #66ff33;**/
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 50%;
     margin: 15px;
     margin-left: 10%;
 }
 
-img {
+.CompleteTaskButton > img {
+    width: 100%;
+    height: 100%;
+}
+
+#List {
     width: 15%;
     height: 100%;
     margin-right: 18px;
@@ -46,7 +51,7 @@ img {
 }
 
 #Tasks {
-    width: 60%;
+    width: 75%;
 }
 
 #Tasks > ul {
