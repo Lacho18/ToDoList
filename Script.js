@@ -7,7 +7,7 @@ let tasksContext = ["Go to the gym", "Swim", "Go to the store", "Buy food for di
 
 taskDiv.appendChild(list);
 
-function updateList(tasks, boolean) {
+function updateList(tasks) {
     for(let i = 0; i < tasks.length; i++) {
         let task = document.createElement("li");
         task.appendChild(taskText(tasks[i]));
