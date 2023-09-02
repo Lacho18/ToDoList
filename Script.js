@@ -3,6 +3,13 @@ let taskDiv = document.getElementById("Tasks");
 let addButton = document.getElementById("add");
 let textField = document.getElementById("text");
 
+//Data used in SkippedTask.js file  -------------------------------------------------
+let skippedTask = [];
+let selectMenu = document.createElement("select");
+let label = document.createElement("label");
+let skippedTaskDiv = document.getElementById("skippedTasks");
+//-----------------------------------------------------------------------------------
+
 let tasksContext = ["Go to the gym", "Swim", "Go to the store", "Buy food for dinner"];
 
 taskDiv.appendChild(list);
@@ -27,8 +34,10 @@ function updateList(tasks, specificTask) {
 
     IgnoredTaskHandle(specificTask);
     let interval = setInterval(() => {
+        addToSkipList(specificTask);
         onGreenButtonClick(specificTask);
-    }, 1000 * 10);
+        clearInterval(interval);
+    }, 1000 * 1);
 }
 
 function taskText(text) {
@@ -73,18 +82,16 @@ function onGreenButtonClick(buttonID) {
 function onRedButtonClick(buttonID) {
     let textValue = buttonID;
     textValue = textValue.replace(" INCORRECT", "");
-    
-    console.log(textValue);
 
     for(let i = 0; i < tasksContext.length; i++) {
         if(textValue === tasksContext[i]) {
             
             if(textValue !== tasksContext[tasksContext.length - 1]) {
                 tasksContext = Arrangement(tasksContext, i);
-                
-                clearList();
-                updateList(tasksContext, textValue);
             }
+
+            clearList();
+            updateList(tasksContext, textValue);
             break;
         }
     }
@@ -118,7 +125,6 @@ function Arrangement(array, markedIndex) {
 
 function IgnoredTaskHandle(taskID) {
     let liElement = document.getElementById(taskID);
-    console.log(liElement)
     liElement.style.backgroundColor = "rgba(89, 89, 89, 0.5)";
     liElement.style.borderRadius = "12px";
     liElement.style.opacity = "0.6";
