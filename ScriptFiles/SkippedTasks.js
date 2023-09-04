@@ -47,35 +47,6 @@ function removeOption(optionID) {
     }
 }
 
-/*function returnToTheMainList(taskContext) {
-    let returnDiv = document.createElement("div");
-    returnDiv.id = "returnDiv";
-    returnDiv.className = "skippedTask";
-    let h2Text = document.createElement("h2");
-    h2Text.innerHTML = `Do you want to send task "${taskContext}" back to the list`;
-    let yesButton = document.createElement("button");
-    yesButton.innerHTML = "YES";
-    yesButton.style.backgroundColor = "#66ff33";
-    let noButton = document.createElement("button");
-    noButton.innerHTML = "NO";
-    noButton.style.backgroundColor = "#e62e00";
-    noButton.id = "NO"
-
-    yesButton.addEventListener("click", () => {
-        yesNoButtonHandler(true, taskContext);
-    });
-
-    noButton.addEventListener("click", () => {
-        yesNoButtonHandler(false, taskContext);
-    });
-
-    returnDiv.appendChild(h2Text);
-    returnDiv.appendChild(yesButton);
-    returnDiv.appendChild(noButton);
-    let body = document.querySelector("body");
-    body.appendChild(returnDiv);
-}*/
-
 function yesNoButtonHandler(boolean, context) {
     if(boolean) {
         tasksContext.push(context);
